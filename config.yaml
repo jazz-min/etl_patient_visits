@@ -1,0 +1,19 @@
+paths:
+  input_csv: "data/input/patient_visits.csv"
+  raw_dir: "data/raw"
+  staging_dir: "data/staging"
+  sqlite_db: "data/warehouse.db"
+
+etl:
+  required_columns:
+    - patient_id
+    - visit_id
+    - visit_date
+    - diagnosis_code
+    - provider_id
+    - visit_cost
+    - last_updated
+
+  dedupe_key: "visit_id"
+  dedupe_order_by: "last_updated"
+

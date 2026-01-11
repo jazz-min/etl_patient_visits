@@ -1,0 +1,3 @@
+patient_id,visit_id,visit_date,diagnosis_code,provider_id,visit_cost,last_updated
+p001,v1001,2025-12-01,A10,pr01,120.5,2025-12-01 12:00:00+00:00
+p002,v1002,2025-12-02,B20,pr02,80.0,2025-12-02 09:15:00+00:00
