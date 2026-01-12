@@ -3,6 +3,7 @@ paths:
   raw_dir: "data/raw"
   staging_dir: "data/staging"
   sqlite_db: "data/warehouse.db"
+  state_json: "data/state/pipeline_state.json"
 
 etl:
   required_columns:
@@ -16,4 +17,14 @@ etl:
 
   dedupe_key: "visit_id"
   dedupe_order_by: "last_updated"
+  dq:
+    fail_on:
+      required_null_rate_gt: 0.0
+      invalid_visit_date_rate_gt: 0.01
+      row_count_lt: 1
+    warn_on:
+      visit_cost_null_rate_gt: 0.05
+    row_count_drop_warn_pct: 0.30
+    freshness_hours_max: 48
+  
 
