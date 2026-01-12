@@ -26,5 +26,9 @@ etl:
       visit_cost_null_rate_gt: 0.05
     row_count_drop_warn_pct: 0.30
     freshness_hours_max: 48
+incremental:
+  enabled: true
+  watermark_column: "last_updated"
+  lookback_hours: 24
   
 
