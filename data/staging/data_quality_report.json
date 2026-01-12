@@ -1,0 +1,74 @@
+{
+  "generated_at_utc": "2026-01-12T17:47:51.991881+00:00",
+  "passed": true,
+  "metrics": {
+    "row_count": 3,
+    "required_null_rates": {
+      "patient_id": 0.0,
+      "visit_id": 0.0,
+      "visit_date": 0.0,
+      "diagnosis_code": 0.0,
+      "provider_id": 0.0,
+      "visit_cost": 0.0,
+      "last_updated": 0.0
+    },
+    "visit_date_parse_rate": 1.0,
+    "visit_cost_null_rate": 0.0,
+    "row_count_drop_pct": 0.0
+  },
+  "checks": [
+    {
+      "name": "row_count_min",
+      "severity": "FAIL",
+      "passed": true,
+      "details": {
+        "row_count": 3,
+        "min_rows": 1
+      }
+    },
+    {
+      "name": "required_null_rate",
+      "severity": "FAIL",
+      "passed": true,
+      "details": {
+        "threshold": 0.0,
+        "rates": {
+          "patient_id": 0.0,
+          "visit_id": 0.0,
+          "visit_date": 0.0,
+          "diagnosis_code": 0.0,
+          "provider_id": 0.0,
+          "visit_cost": 0.0,
+          "last_updated": 0.0
+        }
+      }
+    },
+    {
+      "name": "visit_date_invalid_rate",
+      "severity": "FAIL",
+      "passed": true,
+      "details": {
+        "invalid_rate": 0.0,
+        "threshold": 0.01
+      }
+    },
+    {
+      "name": "visit_cost_null_rate",
+      "severity": "WARN",
+      "passed": true,
+      "details": {
+        "null_rate": 0.0,
+        "threshold": 0.05
+      }
+    },
+    {
+      "name": "row_count_drop_pct",
+      "severity": "WARN",
+      "passed": true,
+      "details": {
+        "drop_pct": 0.0,
+        "threshold": 0.3
+      }
+    }
+  ]
+}
